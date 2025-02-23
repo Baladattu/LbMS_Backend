@@ -7,8 +7,8 @@ import {
 export const addBook = async (req, res, next) => {
   try {
     const { title, author, description, genre, price } = req.body
-    let coverImage = null,
-      bookPdf = null
+    let coverImage = null
+    let bookPdf = null
 
     if (!req.files || !req.files.coverImage || !req.files.bookPdf) {
       return res
