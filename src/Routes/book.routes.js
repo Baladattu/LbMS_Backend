@@ -18,6 +18,6 @@ router.post('/add', isFleetAdmin, uploadBookFiles, addBook)
 router.get('/search', isAuthenticated, searchBooks)
 router.put('/update/:id', isFleetAdmin, uploadCoverImage, updateBook)
 router.delete('/delete/:id', isFleetAdmin, deleteBookById)
-router.get('/allBooks', isAuthenticated, getPaginatedBooks)
+router.get('/allBooks', getPaginatedBooks)
 
 export default router
