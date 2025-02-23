@@ -26,10 +26,10 @@ export const isFleetAdmin = (req, res, next) => {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET)
 
-    if (decoded.userType !== 'FLEET_ADMIN') {
+    if (decoded.userType !== 'SUPER_ADMIN') {
       return res
         .status(403)
-        .json({ message: 'Access denied. Only Fleet Admins are allowed.' })
+        .json({ message: 'Access denied. Only Super Admins are allowed.' })
     }
 
     req.user = decoded
