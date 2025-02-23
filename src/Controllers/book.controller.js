@@ -152,7 +152,7 @@ export const getPaginatedBooks = async (req, res, next) => {
 
     res.status(200).json({
       success: true,
-      books: booksWithRatings,
+      books: books,
       pagination: {
         totalBooks,
         totalPages: Math.ceil(totalBooks / limit),
