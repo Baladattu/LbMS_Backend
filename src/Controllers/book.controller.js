@@ -150,21 +150,6 @@ export const getPaginatedBooks = async (req, res, next) => {
 
     const totalBooks = await Book.countDocuments()
 
-    const booksWithRatings = books.map((book) => {
-      const totalRating = book.reviews.reduce(
-        (sum, review) => sum + review.rating,
-        0,
-      )
-      const rating =
-        book.reviews.length > 0 ? totalRating / book.reviews.length : 0
-
-      return {
-        ...book,
-        rating: parseFloat(rating.toFixed(1)),
-        reviewsCount: book.reviews.length,
-      }
-    })
-
     res.status(200).json({
       success: true,
       books: booksWithRatings,
