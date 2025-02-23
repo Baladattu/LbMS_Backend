@@ -138,10 +138,6 @@ export const getPaginatedBooks = async (req, res, next) => {
     const skip = (page - 1) * limit
 
     const books = await Book.find()
-      .populate({
-        path: 'reviews',
-        select: 'rating',
-      })
       .skip(skip)
       .limit(limit)
       .select('-pdfUrl')
