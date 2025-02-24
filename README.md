@@ -54,7 +54,7 @@ The backend repository for **LbMS_Backend** project, responsible for managing va
 - `DELETE /inventory/:id`: Delete an item
 
 ### Example Request
-**POST /api/signup**
+**POST /api/user/signup**
 ```json
 {
   "username": "exampleUser",
