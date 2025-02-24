@@ -1,6 +1,6 @@
-# The Script Squad BE
+# LbMS_Back3nd
 
-The backend repository for **The Script Squad** project, responsible for managing various backend operations such as user authentication, inventory management, and API integrations. This project is built using modern web development tools and frameworks for a scalable and efficient backend.
+The backend repository for **LbMS_Backend** project, responsible for managing various backend operations such as user authentication, inventory management, and API integrations. This project is built using modern web development tools and frameworks for a scalable and efficient backend.
 
 ## Features
 - **User Authentication**: JWT-based authentication with role-based authorization.
@@ -19,11 +19,11 @@ The backend repository for **The Script Squad** project, responsible for managin
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/pragatisharma21/The-script-squad-BE.git
+   git clone https://github.com/Baladattu/LbMS_Backend.git
    ```
 2. **Navigate to the project directory**:
    ```bash
-   cd The-script-squad-BE
+   cd LbMS_Backend
    ```
 3. **Install dependencies**:
    ```bash
@@ -39,13 +39,13 @@ The backend repository for **The Script Squad** project, responsible for managin
    ```
 
 6. **Test the server**:
-   By default, the server will run on `http://localhost:8080`. You can test the endpoints using tools like Postman or curl.
+   By default, the server will run on `http://localhost:7000`. You can test the endpoints using tools like Postman or curl.
 
 ## API Endpoints
 
 ### Authentication
-- `POST /auth/register`: Register a new user
-- `POST /auth/login`: Login and get a JWT token
+- `POST /api/user/signup`: Register a new user
+- `POST /api/user/login`: Login and get a JWT token
 
 ### Inventory Management
 - `GET /inventory`: Get a list of inventory items
@@ -54,7 +54,7 @@ The backend repository for **The Script Squad** project, responsible for managin
 - `DELETE /inventory/:id`: Delete an item
 
 ### Example Request
-**POST /auth/register**
+**POST /api/signup**
 ```json
 {
   "username": "exampleUser",
@@ -62,23 +62,6 @@ The backend repository for **The Script Squad** project, responsible for managin
 }
 ```
 
-## Project Structure
-
-```
-├── controllers/         # Controllers for handling request logic
-├── models/              # MongoDB models
-├── routes/              # API routes
-├── middlewares/         # Custom middlewares (e.g., auth, error handling)
-├── config/              # Configuration files (e.g., database connection)
-├── .env                 # Environment variables
-└── server.js            # Application entry point
-```
-
-## Testing
-To run tests:
-```bash
-npm test
-```
 
 Ensure that MongoDB is running before testing.
 
