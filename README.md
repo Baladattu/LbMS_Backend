@@ -1,4 +1,4 @@
-# LbMS_Back3nd
+# LbMS_Backend
 
 The backend repository for **LbMS_Backend** project, responsible for managing various backend operations such as user authentication, inventory management, and API integrations. This project is built using modern web development tools and frameworks for a scalable and efficient backend.
 
